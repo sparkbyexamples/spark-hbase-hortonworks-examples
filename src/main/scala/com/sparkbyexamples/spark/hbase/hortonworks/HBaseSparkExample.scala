@@ -1,4 +1,4 @@
-package com.sparkbyexamples
+package com.sparkbyexamples.spark.hbase.hortonworks
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.datasources.hbase.HBaseTableCatalog
