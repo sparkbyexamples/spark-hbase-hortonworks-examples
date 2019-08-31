@@ -11,58 +11,21 @@
   <packaging>jar</packaging>
   <properties>
     <scala.version>2.11.11</scala.version>
-    <spark.version>2.4.0</spark.version>
+    <spark.version>2.1.1</spark.version>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>scala-tools.org</id>
-      <name>Scala-Tools Maven2 Repository</name>
-      <url>http://scala-tools.org/repo-releases</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>scala-tools.org</id>
-      <name>Scala-Tools Maven2 Repository</name>
-      <url>http://scala-tools.org/repo-releases</url>
-    </pluginRepository>
-  </pluginRepositories>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>scala-library</artifactId>
-      <version>${scala.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.specs</groupId>
-      <artifactId>specs</artifactId>
-      <version>1.2.5</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_2.11</artifactId>
+      <artifactId>spark-streaming_2.11</artifactId>
       <version>${spark.version}</version>
-      <scope>compile</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-sql_2.11</artifactId>
-      <version>${spark.version}</version>
-      <scope>compile</scope>
-
     </dependency>
 
     <dependency>
       <groupId>org.apache.hbase</groupId>
       <artifactId>hbase-client</artifactId>
-      <version>2.2.0</version>
+      <version>2.0.2.3.1.0.6-1</version> <!-- Hortonworks Latest -->
     </dependency>
 
     <!-- start hortonworks -->
@@ -70,43 +33,16 @@
     <dependency>
       <groupId>org.apache.hbase</groupId>
       <artifactId>hbase-spark</artifactId>
-      <version>2.0.2.3.1.0.6-1</version>
+      <version>2.0.2.3.1.0.6-1</version> <!-- Hortonworks Latest -->
     </dependency>
 
     <dependency>
       <groupId>com.hortonworks</groupId>
       <artifactId>shc-core</artifactId>
-      <version>1.1.0-2.1-s_2.11</version>
+      <version>1.1.1-2.1-s_2.11</version>
     </dependency>
+
     <!-- end hortonworks -->
-
-    <dependency>
-      <groupId>org.json4s</groupId>
-      <artifactId>json4s-core_2.11</artifactId>
-      <version>3.2.10</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.json4s</groupId>
-      <artifactId>json4s-ast_2.11</artifactId>
-      <version>3.2.10</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.json4s</groupId>
-      <artifactId>json4s-jackson_2.11</artifactId>
-      <version>3.2.10</version>
-    </dependency>
-
-    <!-- cloudera -->
- <!--   <dependency>
-      <groupId>org.apache.hbase</groupId>
-      <artifactId>hbase-spark</artifactId>
-      <version>2.1.0-cdh6.2.0</version>
-    </dependency>
--->
-
-
   </dependencies>
 
   <build>
